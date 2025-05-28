@@ -11,7 +11,7 @@ files.sort();
 
 const gridItems = files.map((file, index) => {
     const pageName = `comic-pages/${file.replace(/\.\w+$/, '.html')}`;
-    const imgSrc = `../media/comic-pages/${file}`;
+    const imgSrc = `../media/thumbnails/${file}`;
     return `
     <a href="${pageName}">
         <img src="${imgSrc}" alt="Page ${index + 1}">
