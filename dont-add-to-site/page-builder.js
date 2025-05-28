@@ -28,6 +28,7 @@ files.forEach((file, index) => {
     <meta charset="UTF-8">
     <title>TheAPX - Page ${index + 1}</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../media/logo.png">
 </head>
 <body>
     <div class="comic-container">
