@@ -36,14 +36,13 @@ const htmlContent = `
 
     <h1>The APX</h1>
 
-        <div class="menu-buttons">
-        <a href="../index.html"><button>Home</button></a>
+    <div class="menu-buttons">
+        <a class="menu-button" href="../index.html">Home</a>
     </div>
 
     <div class="comic-grid">
         ${gridItems}
     </div>
-
 </body>
 </html>
 `.trim();

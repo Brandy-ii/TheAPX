@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap');
+
 /* Base styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'WDXL Lubrifont TC', sans-serif;
     background: #000;
     color: #fff;
     margin: 0;
@@ -16,18 +18,19 @@ body {
     margin: 30px 0;
 }
 
-.menu-buttons a button {
+.menu-button {
     padding: 12px 24px;
     font-size: 16px;
     background: #333;
     color: white;
     border: none;
     border-radius: 5px;
+    text-decoration: none;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
-.menu-buttons a button:hover {
+.menu-button:hover {
     background: #555;
 }
 
@@ -91,7 +94,6 @@ body {
     background: #555;
 }
 
-
 /* list.html */
 .comic-grid {
     display: grid;
@@ -115,7 +117,6 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
 
 .comic-grid a {
     display: block;
