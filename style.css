@@ -55,43 +55,59 @@ body {
 /* Navigation buttons */
 .nav-buttons {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    margin: 20px 0;
-    position: relative;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    gap: 10px;
 }
 
-.nav-arrows a {
-    padding: 10px;
-    font-size: 36px;
-    text-decoration: none;
-    color: white;
-    margin: 0 15px;
-    transition: transform 0.2s ease;
+.nav-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-arrows a:hover {
-    transform: scale(1.2);
+.nav-empty {
+    justify-content: flex-start;
 }
 
 .nav-home {
-    position: absolute;
-    right: 0;
-    top: 0;
+    justify-content: flex-end;
 }
 
-.nav-home a {
-    padding: 10px 20px;
-    margin: 40px;
-    text-decoration: none;
+.nav-arrow {
+    justify-content: center;
+}
+
+.nav-button {
+    padding: 12px 24px;
+    font-size: 20px;
     background: #333;
     color: white;
+    border: none;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    min-width: 48px;
+    text-align: center;
 }
 
-.nav-home a:hover {
+.nav-button:hover {
     background: #555;
+    transform: scale(1.05);
+}
+
+.nav-placeholder {
+    display: inline-block;
+    min-width: 60px;
+    text-align: center;
+    font-size: 20px;
+    opacity: 0;
 }
 
 /* list.html */
@@ -145,4 +161,42 @@ body {
 .logo img {
     display: block;
     margin: 20px auto;
+}
+
+
+/* Responsive scaling for index */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo img {
+        width: 80px;
+        margin: 16px auto;
+    }
+
+    .menu-button {
+        padding: 14px 28px;
+        font-size: 18px;
+    }
+
+    .menu-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .logo img {
+        width: 64px;
+    }
 }

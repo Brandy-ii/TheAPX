@@ -34,12 +34,18 @@ files.forEach((file, index) => {
     </div>
 
 <div class="nav-buttons">
-    <div class="nav-arrows">
-        ${prevFile ? `<a href="${prevFile}">◁</a>` : ''}
-        ${nextFile ? `<a href="${nextFile}">▷</a>` : ''}
+    <div class="nav-col nav-empty"></div>
+
+    <div class="nav-col nav-arrow">
+        ${prevFile ? `<a class="nav-button" href="${prevFile}">◁</a>` : '<span class="nav-placeholder">◁</span>'}
     </div>
-    <div class="nav-home">
-        <a href="../../index.html">Home</a>
+
+    <div class="nav-col nav-arrow">
+        ${nextFile ? `<a class="nav-button" href="${nextFile}">▷</a>` : '<span class="nav-placeholder">▷</span>'}
+    </div>
+
+    <div class="nav-col nav-home">
+        <a class="nav-button" href="../../index.html">Home</a>
     </div>
 </div>
 
