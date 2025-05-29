@@ -14,7 +14,7 @@ const gridItems = files.map((file, index) => {
     const imgSrc = `../media/thumbnails/${file}`;
     return `
     <a href="${pageName}">
-        <img src="${imgSrc}" alt="Page ${index + 1}">
+        <img src="${imgSrc}" alt="Page ${index + 1}" loading="lazy">
         <div class="page-label">Page ${index + 1}</div>
     </a>
     `.trim();
@@ -31,7 +31,7 @@ const htmlContent = `
 </head>
 <body>
     <div class="static-logo">
-            <a href="index.html">
+            <a href="../index.html">
         <img src="../media/logo.png" alt="The APX Logo">
     </a>
     </div>
