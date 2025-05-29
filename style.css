@@ -71,13 +71,6 @@ p {
     padding: 20px;
 }
 
-/* Medium screens (tablets/small laptops) */
-@media (max-width: 1024px) {
-    .comic-grid {
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
 /* Small screens (phones) */
 @media (max-width: 600px) {
     .comic-grid {
