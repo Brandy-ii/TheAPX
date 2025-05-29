@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-const inputDir = path.join(__dirname, '..', 'media', 'comic-pages');
-const outputDir = path.join(__dirname, '..', 'media', 'thumbnails');
+const inputDir = path.join(__dirname, '..', 'media', 'comic-pages-large');
+const outputDir = path.join(__dirname, '..', 'media', 'comic-pages');
 
 // Make sure output directory exists
 if (!fs.existsSync(outputDir)) {
@@ -19,7 +19,7 @@ files.forEach(file => {
     const outputPath = path.join(outputDir, file);
 
     sharp(inputPath)
-        .resize({ width: 300 })
+        .resize({ width: 850 })
         .toFile(outputPath)
         .then(() => console.log(`✅ Thumbnail created: ${file}`))
         .catch(err => console.error(`❌ Error processing ${file}:`, err));
