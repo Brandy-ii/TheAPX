@@ -64,14 +64,60 @@ p {
     justify-content: center;
 }
 
-.comic-container img {
-    width: auto;
-    max-width: 100%;
+.comic-frame {
+    width: 100%;
+    max-width: 580px;
     height: auto;
-    max-height: 80vh;
+    aspect-ratio: 1 / 1; /* square placeholder, 580x580 feel */
     border: 2px solid #fff;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111; /* optional placeholder bg */
+    overflow: hidden;
     box-sizing: border-box;
+}
+
+/* Triangle loader */
+.loading-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-bottom: 155px solid magenta;
+    animation: triangleCycle 3s ease-in-out infinite;
+    z-index: 0;
+}
+
+/* Image sits above */
+.comic-frame img {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    border: none;
+    border-radius: 0;
+    z-index: 1;
+}
+
+/* Color transition animation */
+@keyframes triangleCycle {
+    0% {
+        border-bottom-color: magenta;
+    }
+    33% {
+        border-bottom-color: cyan;
+    }
+    66% {
+        border-bottom-color: yellow;
+    }
+    100% {
+        border-bottom-color: magenta;
+    }
 }
 
 /* Navigation buttons */
@@ -228,6 +274,5 @@ p {
     font-size: 0.8rem;
     color: #aaa;
     margin-top: 4px;
-    margin-bottom: 20px;
   }
 }

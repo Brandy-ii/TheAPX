@@ -38,9 +38,14 @@ files.forEach((file, index) => {
         <p class="mobile-author">by: simulacrum</p>
     </div>
 
-    <div class="comic-container">
-        <img src="${preloadImagePath}" alt="Comic Page ${index + 1}">
+<div class="comic-container">
+    <div class="comic-frame">
+        <div class="loading-triangle"></div>
+            <img src="${preloadImagePath}" alt="Comic Page ${index + 1}">
+    
+        </div>
     </div>
+</div>
 
     <div class="nav-buttons">
         <div class="nav-col nav-empty"></div>

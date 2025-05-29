@@ -19,7 +19,7 @@ files.forEach(file => {
     const outputPath = path.join(outputDir, file);
 
     sharp(inputPath)
-        .resize({ width: 850 })
+        .resize({ width: 580 })
         .toFile(outputPath)
         .then(() => console.log(`✅ Thumbnail created: ${file}`))
         .catch(err => console.error(`❌ Error processing ${file}:`, err));
