@@ -86,8 +86,7 @@ p {
     height: 0;
     border-left: 90px solid transparent;
     border-right: 90px solid transparent;
-    border-bottom: 155px solid magenta;
-    animation: triangleCycle 3s ease-in-out infinite;
+    border-bottom: 155px solid #222; /* dark gray */
     z-index: 0;
 }
 
@@ -102,22 +101,6 @@ p {
     border: none;
     border-radius: 0;
     z-index: 1;
-}
-
-/* Color transition animation */
-@keyframes triangleCycle {
-    0% {
-        border-bottom-color: magenta;
-    }
-    33% {
-        border-bottom-color: cyan;
-    }
-    66% {
-        border-bottom-color: yellow;
-    }
-    100% {
-        border-bottom-color: magenta;
-    }
 }
 
 /* Navigation buttons */
