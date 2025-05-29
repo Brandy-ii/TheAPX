@@ -30,8 +30,10 @@ const htmlContent = `
     <link rel="icon" href="../../media/logo.png">
 </head>
 <body>
-    <div class="logo">
-        <img src="../media/logo.png" alt="The APX Logo" width="100">
+    <div class="static-logo">
+            <a href="index.html">
+        <img src="../media/logo.png" alt="The APX Logo">
+    </a>
     </div>
 
     <h1>The APX</h1>
